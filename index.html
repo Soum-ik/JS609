@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="Download youtube videos & audio in high quality, free and no ads !"
+    />
+    <meta name="author" content="Soumik Sarkar" />
+    <meta name="theme-color" content="white" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="keywords"
+      content="youtube, utube, youtube video, youtube downloader, youtube video download, racoon"
+    />
+    <link rel="manifest" href="racoon.webmanifest" />
+
+    <title>JS 609</title>
+
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico/css/pico.classless.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://css.gg/css?=website|loadbar-alt|check|info"
+    />
+    <link rel="stylesheet" href="racoon.css" />
+    <script defer src="js/index.js"></script>
+    <script defer src="js/modal.js"></script>
+  </head>
+
+  <body>
+    <header align="center">
+      <h1><img src="logo.png" class="logo" />JS 609</h1>
+    </header>
+
+    <main class="container">
+      <form>
+        <label for="vQuality">Select Video Quality</label>
+        <select id="vQuality">
+          <option value="144">144p</option>
+          <option value="240">240p</option>
+          <option value="360">360p</option>
+          <option value="480">480p</option>
+          <option value="720" selected>720p</option>
+          <option value="1080">1080p</option>
+        </select>
+
+        <label for="aFormat">Select Audio Quality</label>
+        <select id="aFormat">
+          <option value="best">Best</option>
+          <option value="mp3">MP3</option>
+          <option value="ogg">OGG</option>
+          <option value="wav">WAV</option>
+          <option value="opus">Opus</option>
+        </select>
+
+        <input type="checkbox" id="isAudioOnly" />
+        <label for="isAudioOnly"> Audio Only</label>
+        <br /><br />
+        <input type="url" id="url" placeholder="Input URL here" required />
+
+        <button type="submit" class="submitBtn">Download</button>
+      </form>
+      <div id="status"></div>
+    </main>
+
+    <footer align="center">
+      <a class="contrast" data-target="about" onClick="toggleModal(event)">
+        About
+      </a>
+      <a class="contrast" data-target="developer" onClick="toggleModal(event)">
+        Developer
+      </a>
+      <a
+        class="contrast"
+        data-target="supported-sites"
+        onClick="toggleModal(event)"
+      >
+        Supported Sites
+      </a>
+
+      <dialog id="about">
+        <article>
+          <header>About</header>
+          <img width="50%" src="logo.png" class="logo" />
+          <br /><br />
+          Racoon is a lightweight media downloader written in HTML, CSS and JS
+          with PicoCSS library.
+          <footer>
+            Licensed under MIT, open-sourced at
+            <a href="https://github.com/shailendramaurya/racoon">Github</a>.
+          </footer>
+        </article>
+      </dialog>
+
+      <dialog id="developer">
+        <article>
+          <header>Soumik Sarkar</header>
+          <div style="display: flex">
+            <figure>
+              <img
+                width="50%"
+                src="https://avatars.githubusercontent.com/soum-ik"
+              /><br /><br />
+              A Passionate Web Developer
+              <footer><a href="sarkarsoumik215@gmail.com">Email</a></footer>
+            </figure>
+          </div>
+        </article>
+      </dialog>
+    </footer>
+    <dialog id="supported-sites">
+      <article>
+        <header>Supported Sites</header>
+
+        <ul>
+          <li>YouTube videos, shorts & music</li>
+          <li>Instagram Reels & posts</li>
+          <li>TikTok videos, photos & audio</li>
+          <li>Vimeo</li>
+          <li>Pinterest videos & stories</li>
+          <li>Reddit videos & GIFs</li>
+          <li>Bilibili.com videos</li>
+          <li>Rutube videos</li>
+          <li>SoundCloud</li>
+          <li>Streamable.com</li>
+          <li>Tumblr</li>
+          <li>Twitch clips</li>
+          <li>Twitter videos & voice</li>
+          <li>Vine archive</li>
+          <li>VK video & clips</li>
+        </ul>
+
+        <p>JS 609 is not affiliated with any services listed above.</p>
+      </article>
+    </dialog>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then((registration) => {
+            console.log(
+              "Service Worker registered with scope:",
+              registration.scope
+            );
+          })
+          .catch((error) => {
+            console.error("Service Worker registration failed:", error);
+          });
+      }
+    </script>
+  </body>
+</html>
