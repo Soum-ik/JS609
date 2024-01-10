@@ -6,8 +6,8 @@ A media downloader written in HTML, JS with pico css.
 
 ## Author
 
-Shailendra Maurya  
-Github Profile: [shailendramaurya](https://github.com/shailendramaurya)
+Soumik Sarkar
+Github Profile: [shailendramaurya](https://github.com/Soum-ik)
 
 ## Description
 
