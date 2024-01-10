@@ -39,7 +39,7 @@ Racoon is a media downloader that allows you to easily download videos, posts fr
   - vine archive
   - vk video & clips
 
-Racoon is not affiliated with any services listed above in any way, it just fetches the data which are publically available on internet via api
+JS 609 is not affiliated with any services listed above in any way, it just fetches the data which are publically available on internet via api
 
 ## Features Yet to Implement
  
@@ -47,7 +47,7 @@ Racoon is not affiliated with any services listed above in any way, it just fetc
  
 ## Inegration with your own app
 
- Racoon can be integrated in any web app, just pass parameter ```?url=MEDIA_URL_HERE``` to ```https://shailendramaurya.github.io/racoon```, and it will start download..... Also, if you want to download audio only pass ```?audio=true```. Thank you !
+ JS 609 can be integrated in any web app, just pass parameter ```?url=MEDIA_URL_HERE``` to ```https://soum-ik.github.io/JS609```, and it will start download..... Also, if you want to download audio only pass ```?audio=true```. Thank you !
 
 ## Contributing
 
