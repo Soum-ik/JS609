@@ -1,4 +1,4 @@
-# Racoon
+# JS609
 
 A media downloader written in HTML, JS with pico css.
 
@@ -7,7 +7,7 @@ A media downloader written in HTML, JS with pico css.
 ## Author
 
 Soumik Sarkar
-Github Profile: [shailendramaurya](https://github.com/Soum-ik)
+Github Profile: [Soumik Sarkar](https://github.com/Soum-ik)
 
 ## Description
 
